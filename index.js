@@ -4,6 +4,8 @@
 //TODO: Import necessary functions from atm.js
 //TODO: Utilize prompt-sync so we can get user input for various functions
 //* Refer to Intro to Node.js PowerPoint for prompt-sync installation instructions
+const {money} = require("./account")
+const {pin} = require("./account")
 
 function accessATM() {
   //TODO: Prompt users for their pin

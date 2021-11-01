@@ -5,3 +5,10 @@
 //TODO: Create variables for account balance & account pin
 
 //Export these variables
+
+
+let actBalance = 325
+let actPin = 5858
+
+export const money = actBalance;
+export const pin = actPin;

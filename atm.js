@@ -1,6 +1,7 @@
 "use strict";
 //TODO: Import necessary values from account.js
-
+const {money} = require("./account")
+const {pin} = require("./account")
 function getBalance() {
   //TODO: Return the customer's acct. balance
 }
