@@ -4,10 +4,14 @@
 //TODO: Import necessary functions from atm.js
 //TODO: Utilize prompt-sync so we can get user input for various functions
 //* Refer to Intro to Node.js PowerPoint for prompt-sync installation instructions
-const {money} = require("./account")
-const {pin} = require("./account")
+const atm = require("./atm");
 
 function accessATM() {
+  prompt("What is your pin number?", validatePin); {
+    return (mainMenu);
+  }
+
+
   //TODO: Prompt users for their pin
   //Use ATM.js validatePin function to verify pin matches
   //Proceed to main menu ONLY if they match
