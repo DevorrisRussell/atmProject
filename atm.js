@@ -1,52 +1,49 @@
 "use strict";
 //TODO: Import necessary values from account.js
-const {money} = require("./account")
 const {pin} = require("./account")
+let {balance} = require("./account")
 
 function getBalance() { 
-  let yourBalance = prompt("Do you want to see balance? 'yes' or 'no'",
-  yesNo);  {
-    if ( userinput === yes) return console(getBalance);
+  return balance
   } 
   
   
   //TODO: Return the customer's acct. balance
-}
 
 function withdraw(withdrawAmount) { 
-  let withdraw = prompt("How much do you want to withdraw? ") 
-  let takeMoney = money;
-  let value = 
- while (value) {}
-  
+  balance -= parseInt(withdrawAmount)
+  console.log(`The new balance is $(balance)`);
   //TODO: withdraw amount from current acct. balance
   // Log the current balance after withdrawal is made
 }
 
 function deposit(depositAmount) {
+  balance += parseInt(depositAmount)
+  console.log(`The new balance is $(balance)`);
   //TODO: deposit amount to current acct. balance
   // Log the current balance after deposit is made
 }
 
-function validatePin(enteredPin) { if (
-    input.pin === pin) return true; else {
-      return false; 
-    }
-  }; return alert("You entered the wrong pin?")
-
-
-  function yesNo(input) {
-    if (input.toLowerCase() == "yes" || input.toLowerCase() == "no") {
-      return true;
-    } else {
-      return false;
-    }
+function validatePin(enteredPin) { 
+  if (parseInt(enteredPin) === pin) {
+    return true;
+  } else return false;
   }
+
+module.export = {
+  getBalance: getBalance,
+  withdraw: withdraw,
+  deposit: deposit,
+  validate: validatePin,
+};
+
+
+  
   //TODO: Check if entered pin matches account.js pin
   //Allow access to ATM if matching
   //Return value should be a Boolean (true or false)
   //In English: if the PIN entered is correct, return True. Otherwise, return False.
-}
+
 
 function atm() {
   return {
@@ -58,3 +55,5 @@ function atm() {
 };
 
 module.exports = atm;
+
+console.log(balance);
